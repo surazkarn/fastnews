@@ -1,4 +1,3 @@
-
 import { Box, styled, Typography } from '@mui/material'
 
 
@@ -14,7 +13,12 @@ const Container = styled(Box)(({ theme }) => ({
     }
 }));
 
-
+const Image = styled('img')({
+    height: 34,
+    '&:last-child': {
+        margin: '0 50px 0 20px'
+    }
+});
 
 const Text = styled(Typography)`
         font-size: 14px;
@@ -24,15 +28,15 @@ const Text = styled(Typography)`
     `;
 
 const InfoHeader = () => {
-   
-
+    const appleStore = '/logo192.png';
+    
     return (
         <Container>
             <Text>
-                For the best experience use <b>FastNews</b> app on your smartphone
+                For the best experience use <b>FastNews</b> on your smartphone
             </Text>
             <Box style={{ marginLeft: 'auto', display: 'flex' }}>
-                
+                <Image src={appleStore} alt="apple store" />
             </Box>
         </Container>
     )
